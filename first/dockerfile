@@ -4,7 +4,7 @@ FROM ubuntu : latest
 WORKDIR /app
 
 #copy the file from the host file system 
-COPY ./app
+COPY . /app
 
 #insatall the nessary package
 RUN apt-get  update && apt-get install -y pyhton3 pyhton3-pip
