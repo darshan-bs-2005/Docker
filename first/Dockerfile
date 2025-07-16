@@ -1,19 +1,16 @@
-FROM ubuntu : latest
+FROM ubuntu:latest
 
-#set working directory in the image
+# Set working directory in the image
 WORKDIR /app
 
-#copy the file from the host file system 
+# Copy the file from the host file system
 COPY . /app
 
-#insatall the nessary package
-RUN apt-get  update && apt-get install -y pyhton3 pyhton3-pip
+# Install the necessary packages
+RUN apt-get update && apt-get install -y python3 python3-pip
 
-# set environment variable
+# Set environment variable
 ENV NAME WORLD
 
-#run a commond to start the application
-CMD ["python3","hello.py"]
-
-
-
+# Run a command to start the application
+CMD ["python3", "hello.py"]
